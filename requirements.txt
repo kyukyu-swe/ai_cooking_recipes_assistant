@@ -1,0 +1,8 @@
+google-generativeai
+streamlit
+pillow 
+python-dotenv
+speechrecognition 
+pydub
+streamlit_webrtc
+audio-recorder-streamlit
