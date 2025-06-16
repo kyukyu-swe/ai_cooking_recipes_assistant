@@ -1,71 +1,125 @@
 # 🍳 AI Chef Assistant
 
-**AI Chef Assistant** is a Streamlit-based web app that helps users generate creative recipes using either a photo of ingredients or a voice command. Powered by Google's Gemini AI, it provides personalized recipes while considering allergies and time constraints.
+An intelligent cooking assistant that generates personalized recipes based on your available ingredients. Simply take a photo of your ingredients or describe them by voice, and let AI create delicious recipes tailored to your needs.
 
----
+## ✨ Features
 
-## 🚀 Features
+- **Multiple Input Methods**
 
-- 🖼️ **Image Input**: Upload a photo of your ingredients to generate a recipe.
-- 🎤 **Voice Input**: Speak your ingredients or upload an audio file.
-- ⚠️ **Allergy Consideration**: Specify allergies to avoid restricted ingredients.
-- ⏱️ **Time Constraints**: Set maximum preparation time for convenience.
-- 📋 **Recipe Details**: Includes name, ingredients, steps, prep time, calories, and a chef's tip.
-- 💾 **Save Recipes**: Store multiple recipes in your personal recipe book.
+  - 📷 Upload photos of ingredients
+  - 🎤 Voice command input
+  - 🎙️ Audio file upload support (WAV, MP3, M4A)
 
----
+- **Smart Recipe Generation**
 
-## 📦 Requirements
+  - 🤖 AI-powered recipe creation
+  - 📝 Multiple recipe suggestions
+  - ⚡ Real-time generation
+  - 🔄 Considers dietary restrictions
+  - ⏱️ Respects time constraints
 
-Install dependencies from `requirements.txt`:
+- **User-Friendly Interface**
+  - 👀 Clean, modern design
+  - 📱 Responsive layout
+  - 💾 Save recipes as text files
+  - 📋 Clear ingredient lists
+  - 📝 Step-by-step instructions
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.8 or higher
+- pip (Python package installer)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/ai-powered-cooking-assistant.git
+cd ai-powered-cooking-assistant
+```
+
+2. Install required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
+3. Set up your environment variables:
+   - Create a `.env` file in the project root
+   - Add your Gemini API key:
+   ```
+   GEMINI_API_KEY=your_api_key_here
+   ```
 
-## 🔐 Environment Variables
+### Running the App
 
-Create a `.env` file in the root directory with the following:
-
-```env
-GEMINI_API_KEY=your_google_generativeai_api_key
-```
-
-Make sure `.env` is in `.gitignore` to avoid exposing your API key.
-
----
-
-## 🛠️ Run the App
-
-Run the Streamlit app using:
+1. Start the Streamlit app:
 
 ```bash
 streamlit run app.py
 ```
 
----
+2. Open your browser and navigate to the displayed URL (typically `http://localhost:8501`)
 
-## 📁 Project Structure
+## 📖 Usage
+
+1. **API Key Setup**
+
+   - Enter your Gemini API key in the sidebar
+   - Get your key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+2. **Input Ingredients**
+
+   - Option 1: Upload a photo of your ingredients
+   - Option 2: Use voice command to describe ingredients
+   - Option 3: Upload an audio file with ingredient description
+
+3. **Specify Preferences**
+
+   - Enter any allergies or foods to avoid
+   - Set maximum preparation time
+
+4. **Generate Recipes**
+   - Click "Create Recipe!"
+   - View multiple recipe suggestions
+   - Save preferred recipes
+
+## 🏗️ Project Structure
 
 ```
-AI_POWERED_COOKING_ASSISTANT/
-├── app.py               # Main Streamlit app
-├── .env                 # Environment variables (not committed)
-├── .gitignore           # Git ignore rules
-├── requirements.txt     # Python dependencies
-└── cooking/             # (Ignored in git, add your own assets/modules here)
+ai-powered-cooking-assistant/
+├── app.py                 # Main Streamlit application
+├── models/
+│   └── recipe.py         # Recipe data model and utilities
+├── services/
+│   └── ai_service.py     # AI service for recipe generation
+├── ui/
+│   └── recipe_display.py # UI components and styling
+├── .env                  # Environment variables
+└── requirements.txt      # Python dependencies
 ```
 
----
+## 🛠️ Technologies Used
 
-## 📌 Notes
+- **Streamlit**: Web application framework
+- **Google Gemini AI**: Recipe generation
+- **SpeechRecognition**: Voice input processing
+- **PIL**: Image processing
+- **Python-dotenv**: Environment management
 
-- Uses **Google's Gemini 2.0 Flash** for fast and efficient content generation.
-- Audio recognition uses **Google Speech Recognition API** via `speech_recognition`.
-- Embedded **audio_recorder_streamlit** for real-time recording.
+## 🤝 Contributing
 
----
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 🧑‍🍳 Made with ❤️ for foodies and tech lovers!
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Google Gemini AI for powering recipe generation
+- Streamlit for the amazing web framework
+- All contributors and users of this project
